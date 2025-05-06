@@ -1,0 +1,108 @@
+
+* {
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family:"Open Sans", sans-serif;
+}
+
+#top-bar {
+    color: white;
+    background-color: #333;
+    border-bottom:5px solid orange;
+   
+    font-size:24px;
+    font-weight: bold;
+    text-align: center;
+    padding:8px ;
+}
+
+#container {
+        max-width: 888px;
+        margin:auto;
+        padding:30px;    
+}
+
+h1 {
+    font-size: 56px;
+    line-height:64px;
+    margin:40px auto;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight:400;
+    margin:20px auto;
+    
+}
+
+#header-info {
+    width:500px;
+    margin-bottom:20px;
+}
+
+#author {
+    font-weight:bold;
+    font-size:0.8em;
+    color: orangered;
+}
+
+nav > a {
+    margin-right:20px;
+    text-decoration: none;
+}
+
+img {
+    width:20px;
+}
+
+
+
+#footer {
+    background-color: #333;
+    height: 100px;
+}
+
+
+#main {
+    width: 80%;
+    margin: auto;
+    font-weight: 400;
+    
+    color:#555;
+}
+
+p {
+    line-height:32px ;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+#main > p > a {
+    cursor: pointer;
+    text-decoration: none;
+    color: orangered;
+    font-weight: 700;
+
+}
+
+#main > p > a:active {
+    color: orange;
+}
+
+#main > p > a:hover {
+    color: darkorange;
+}
+
+figure > img {
+    width: 100%;
+    height:400px;
+    mar
+}
+
+.main-h2 {
+    font-weight: 700;
+    color: black;
+    font-size: 25px;
+}
+

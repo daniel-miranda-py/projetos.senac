@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="erupcao-vulcanica.png" type="image/x-icon">
+    <title> JavaScript Burnout </title>
+</head>
+<body>
+    <header>
+        <div id="logo-container">
+            <img src="https://i.pinimg.com/736x/b8/c4/9b/b8c49ba3c15ad3059f7a1c47a5412156.jpg" alt="logo-volcano">
+            <h1 id="header-h1"> JavaScript Burnout</h1>
+        </div>
+        <nav>
+            <div id="nav-container-01">
+                <a href="#">Home</a>
+                <a href="#">Sobre</a>
+                <a href="#">Nossa Equipe</a>
+                <a href="#">Serviço</a>
+                <a href="#">Contato</a>
+            </div>
+            <div id="nav-container-02">
+                <a href="#"> <i class="bi bi-facebook" src="facebook.svg"> <img src="facebook.svg" alt="" class="nav-icon"> </i> </a>
+                <a href="#"><i class="bi bi-instagram"> </i> <img src="instagram.svg" alt="" class="nav-icon"></a>
+                <a href="#"> <i class="bi bi-youtube"></i> </a> <img src="youtube.svg" alt="" class="nav-icon">
+                <a href="#"> <i class="bi bi-cart"> <img src="cart.svg" alt="" class="nav-icon"></i> </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="all-sections">
+            <h1 class="main-h1">Tipos de Variaveis</h1>
+            <p>Variáveis são como uma memória de computador. Elas guardam diversos tipos de informações. JavaScript tem três tipos: </p>
+            <ul>
+                <li> <em> Var: </em> Antigamente, qualquer tipo de variável em JavaScript se chamava <em>var.</em> Então para se definir uma variável, você escreveria <pre>var nomeVariavel = 10; </pre></em></li>
+                <li> <em> Const:</em> Para armazenar valores constantes, que não mudam ao longo do código.</li>
+                <li><em> Let:</em> Para definir variáveis cujo valor pode mudar a qualquer momento.</li>
+            </ul>
+            <p>O primeiro tipo entrou quase em desuso, sendo mais utilizado em aplicações mais antigas. Para definir uma variável é facil, basta colocar: <br> <em>const nomeDaVariavel</em> = 'olá, eu sou uma variável'</p>
+            <p>Em JavaScript, podemos guardar quase qualquer coisa dentro de uma variável. Pode ser um número, uma string, um valor booleano, uma função, um objeto, entre várias outras coisas.</p>
+        </section>
+        <section class="all-sections">
+            <h1 class="main-h1">Funções</h1>
+            <p>Funções são blocos de código que podemos envocar sempre que precisarmos, elimanando assim a necessidade de refazer uma mesma estrutura. Para definir uma variável fazemos:</p>
+            
+        
+                    <pre>
+                        <code>
+                            function functionName (parametro01, parametro02) {
+                                console.log('Você pode colocar o que quiser dentro de uma variável, até mesmo definir um objeto.')
+                                return parametro01 + parametro02 + 3;
+                            }
+                            functionName(1,2);
+                        </code>
+                    </pre>
+            
+            
+            <p>Os parametros de uma função podem ser qualquer coisa. Uma string, um número. O <em>return</em> retorna o valor, qualquer valor ou calculo que você colocar depois dele, ao invés de retornar a função. Assim você pode armazenar o resultado daquilo que a função fez para você. </p>
+        </section>
+        <section class="all-sections">
+            <h1 class="main-h1">Loops</h1>
+            <p> Loops são estruturas de repetição. Elas se repetem até que um determinado limite seja atingido. São algumas delas: for e switch.</p>
+        
+                    <pre>
+                        <code>
+                            for (i = 0; i > 3; i++) {
+                                console.log('Esta frase vai ser escrita na tela até que i seja maior que três, ou seja, igual a três');
+                            }
+                            switch (variavel) {
+                                case valor:
+                                    console.log("Se 'valor for igual ao que tá na variavel, escreva esse console.")
+                                break;
+                                case valor2;
+                                    console.log("Se o valor2 for igual ao valor da variável, escreve este console.")
+                                break;
+                                default:
+                                    console.log("Se nenhuma das opções for igual ao valor da variavel, escreva esta mensagem no console.")
+                            }
+                        </code>
+                    </pre>
+            
+            <p>Então, o <em>Switch</em>, faz uma repetição até que o valor presente na condição seja igual a algum valor dos <em>cases</em><div class=""></div></p>
+        </section>
+        <section class="all-sections"> 
+            <h1 class="main-h1">Objetos</h1>
+            <p>Na vida real, um carro é um objeto. Uma armário é um objeto. Uma colher é um objeto. Todos esses objetos tem suas propriedades. Uma propriedade/característica do carro: ser azul. Outra propriedade: ser da honda. Honda e azul são duas propriedades possíveis de um carro. Em javaScript, escreveriamos as propriedades de um carro assim: </p>
+        
+                        <pre>
+                            <code>
+                                const carro = {marca: 'honda', cor: 'azul'};
+                            </code>
+                            Onde:
+                            Carro é um objeto;
+                            marca é uma propriedade que todos os carros têm;
+                            Honda é uma das possíveis marcas do objeto. Em javaScript, chamamos isso de valor.
+                        </pre>
+             
+            <p>Só que em JavaScript os objetos não são carros, nem armarios ou garfos. Geralmente, um objeto é um conjunto de código ou parte de um arquivo html. E esse conjunto de informações é guardado dentro de um objeto, que por sua vez é guardado dentro de uma variável. Pense em objeto como um armazem de informações, que podem ser acessadas e acordo com sua área (categoria). Isso é um objeto.</p>
+        </section>
+    </main>
+</body>
+</html>
