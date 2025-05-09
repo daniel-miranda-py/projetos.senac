@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main {
+    margin: auto;
+    max-width: 35%;
+    min-width: 10%;
+    max-height:100vh;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom:25px;
+}
+
+input {
+    display: block;
+    min-width: 100%;
+    min-height:5vh;
+    margin-bottom:30px;
+}
+
+button {
+    margin: auto;
+    margin-bottom: 41px;
+    display: block;
+    width:150px;
+    height: 40px;
+    cursor: pointer;
+}
+
+#div-container {
+    max-width:100%;
+    max-height:11vh;
+    overflow-y:auto;
+}
+
+table, tbody {
+    margin: auto;
+    border-collapse: collapse;
+    width:100%;
+    max-height:13vh;
+}
+
+th {
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+td {
+    height: 30px;
+    border-bottom: 1px solid black;
+    text-transform: lowercase;
+    text-align: center;
+}

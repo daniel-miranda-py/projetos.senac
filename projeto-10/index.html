@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Alunos</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro de Alunos</title>
+</head>
+<body>
+    <div id="main">
+        <h1>Cadastro de Alunos</h1>
+
+        <label for="nome">Nome</label>
+        <input type="text" id="nome">
+
+        <label for="idade">Idade</label>
+        <input type="text" id="idade" >
+
+        <label for="nota01">Nota 01</label>
+        <input type="text" id="nota01" >
+
+        <label for="nota02">Nota 02</label>
+        <input type="text" id="nota02" >
+
+        <label for="nota03">Nota 03</label>
+        <input type="text" id="nota03" >
+
+        <button onclick='cadastroAlunos()'>Adicionar aluno</button>
+        <div id="div-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Idade</th>
+                        <th>Media</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        /*  1. Primeiro: guardar os valores.
+        2. Segundo: calcular a média.
+        3. Varificar o status do aluno 
+        4. Exibir as informações na tela
+        5. Mensagem de: preencha todos os campos + cor vermelha
+        */
+
+        function cadastroAlunos () {    
+            
+        let nome = document.getElementById('nome').value;
+        let idade = Number(document.getElementById('idade').value);
+        let nota01 = Number(document.getElementById('nota01').value);
+        let nota02 = Number(document.getElementById('nota02').value);
+        let nota03 = Number(document.getElementById('nota03').value);
+        
+        let cadastroAlunos = [nome, idade, nota01, nota02, nota03];
+
+        let media = (nota01 + nota02 + nota03) / 3;
+
+        let status;
+
+        for (let i = 0; i > 4; i++) {
+            if (cadastroAlunos[i] == ' ') {
+                alert('preencha todos os campos');    
+            } else {
+                alert('todos os campos foram preenchidos');
+            }
+        }    
+
+        if (media >= 7) {
+            status = 'aprovado';
+        } else {
+            status = 'reprovado';
+        }
+
+        let corpoTabela = document.body.querySelector('tbody');
+        let linha = document.createElement('tr');
+        corpoTabela.appendChild(linha);
+
+        let celulaNome = document.createElement('td');
+        celulaNome.innerHTML = nome; 
+        linha.appendChild(celulaNome);
+
+        let celulaIdade = document.createElement('td');
+        celulaIdade.innerHTML =idade;
+        linha.appendChild(celulaIdade);
+
+        let celulaMedia = document.createElement('td');
+        celulaMedia.innerHTML = media;
+        linha.appendChild(celulaMedia);
+
+        let celulaStatus = document.createElement('td');
+        celulaStatus.innerHTML = status;
+        linha.appendChild(celulaStatus);
+
+        
+        }
+        
+    </script>
+</body>
+</html>
+</body>
+</html>
