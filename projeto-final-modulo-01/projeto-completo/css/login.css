@@ -1,0 +1,88 @@
+body {
+  background-image: linear-gradient(rgba(29,29,29,0.8)), url('./3.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.Login {
+  background-color: rgba(0, 0, 0, 0.233);
+  padding: 50px;
+  border: 1px solid #4b4141;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 10px;
+
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  
+}
+
+button {
+  margin-top: 10px;
+  padding: 9px;
+  width: 150px;
+  border-radius: 5px;
+  border: none;
+  background-color: #aa8f16;
+  color: #ffffff;
+  cursor: pointer;
+  margin: 5px;
+  margin: 15px;
+
+
+}
+
+label {
+  color: #ffffff;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h2 {
+  color: #aa8f16;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.google-btn {
+  width: 200px;
+  padding: 9px;
+}
+
+
+.google {
+  color: #cdcdcd;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 10px;
+}
+
+@media (max-width: 500px) {
+  .Login {
+    padding: 30px 20px;
+  }
+
+  button,
+  .google-btn {
+    width: 100%;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+}

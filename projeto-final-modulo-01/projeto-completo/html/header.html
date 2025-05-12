@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cabeçalho</title>
+    <style>
+
+        header {
+            height:15vh;
+            width:100%;
+            display: flex;
+            flex-direction: row;
+            background-color: rgba(255, 255, 255, 0);
+        } 
+
+        #logo-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+            align-items: center;
+            width:20%;
+            height: 100%;
+        }
+
+        #logo-img {
+            width: 80px;
+            height: 80px;
+            margin-left:10px;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content:right;
+            align-items: center;
+            width:70%;
+        }
+
+        #nav-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: ;
+            padding-top:50px;
+            background-color: purple;
+            background-image: url(920a3ce72be9e73f7c8511c78d761266.jpg);
+            background-repeat: no-repeat;
+            background-size:cover;
+            position: fixed;
+            top:0;
+            right:0;
+            height:100vh;
+            width:350px;
+            transition: transform 0.3s ease;
+            transform: translateX(100%); /* Começa fora da tela */
+            z-index: 999;
+}
+        #nav-container.ativo {
+        transform: translateX(0); /* Desliza para dentro da tela */;
+
+        }
+
+        .nav-link { 
+            margin-left:30px;
+            font-size: 20px;
+            text-decoration: none;
+            height:45px;
+            color: white;
+        }
+
+        .nav-link:hover {
+        /* alterar depois */
+        }
+
+        #nav-img {
+            width:35px;
+            height:35px;
+            position:absolute;
+            top: 60px;
+            right: 200px;
+        }
+
+        #nav-img:hover {
+            cursor: pointer;
+        }
+
+        #nav-img-ativo {
+            min-height:50px;
+            background-color: white;
+            border-radius: 50%;
+            padding: 30px;
+            margin-bottom:20px;
+            margin-left:9px;
+        }
+
+         #nav-img-ativo:hover{
+            background-color: white;
+            border-color:2px solid  white;
+            opacity: 0.8;
+            transition: ;
+            cursor: pointer;
+        }   
+
+    </style>
+</head>
+<body>
+    <header>
+        <!-- A ideia é colocar um display none no ícone. Quando ocorrer um click, vamos ativar o display block e abrir uma barra lateral -->
+
+        <div id="logo-container">
+            <h1>Musicália</h1>
+            <a href="#"><img id="logo-img" src="logo.jpeg" alt="logo"></a> <!-- a logo nos leva de volta para página inicial -->
+        </div>
+        <nav>
+            <div id="nav-container">
+                <i class="bi bi-person-circle"> <img id="nav-img-ativo" src="person-circle.svg" alt="nav-bar-button" onclick="navBar();"></i> 
+                <a class="nav-link" href="">Login</a>
+                <a class="nav-link" href="">Quizzes e Jogos</a>
+                <a class="nav-link" href="">Comunidade</a>
+                <a class="nav-link" href="">Testes seus conhecimentos</a>
+                <a class="nav-link" href="">Fale Conosco</a>
+            </div>
+            <i class="bi bi-person-circle"> <img id="nav-img" src="person-circle.svg" alt="nav-bar-button" onclick="navBar();"></i>
+        </nav>
+    </header>
+    <script>
+        function navBar() {
+        const navButton = document.getElementById('nav-img'); 
+        const navContainer = document.getElementById('nav-container');
+        navContainer.classList.toggle('ativo');
+        navButton.classList.toggle('ativo');
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>felphmusic</title>
+
+
+</head>
+
+<body>
+
+    <header>
+        <!-- A ideia é colocar um display none no ícone. Quando ocorrer um click, vamos ativar o display block e abrir uma barra lateral -->
+
+        <div id="logo-container">
+            <h1>Musicália</h1>
+            <a href="#"><img id="logo-img" src="logo.jpeg" alt="logo"></a> <!-- a logo nos leva de volta para página inicial -->
+        </div>
+        <nav>
+            <div id="nav-container">
+                <i class="bi bi-person-circle"> <img id="nav-img-ativo" src="person-circle.svg" alt="nav-bar-button" onclick="navBar();"></i> 
+                <a class="nav-link" href="">Login</a>
+                <a class="nav-link" href="">Quizzes e Jogos</a>
+                <a class="nav-link" href="">Comunidade</a>
+                <a class="nav-link" href="">Testes seus conhecimentos</a>
+                <a class="nav-link" href="">Fale Conosco</a>
+            </div>
+            <i class="bi bi-person-circle"> <img id="nav-img" src="person-circle.svg" alt="nav-bar-button" onclick="navBar();"></i>
+        </nav>
+    </header>
+
+    <h1>Explore Estilos Musicais</h1>
+
+    <div class="felphcard">
+
+        <div class="cardmusicas">
+            <img src="rock.jfif" alt="Rock">
+            <h2>Rock</h2>
+            <p>Clique para conhecer a história e seus principais artistas</p>
+        </div>
+
+        <div class="cardmusicas">
+            <img src="samba.jfif" alt="Samba">
+            <h2>Samba</h2>
+            <p>Clique para conhecer a história e seus principais artistas</p>
+        </div>
+
+        <div class="cardmusicas">
+            <img src="pop2.jfif" alt="Pop">
+            <h2>Pop</h2>
+            <p>Clique para conhecer a história e seus principais artistas</p>
+        </div>
+
+        <div class="cardmusicas">
+            <img src="hiphop.jfif" alt="Hip-hip">
+            <h2>Hip-hop</h2>
+            <p>Clique para conhecer a história e seus principais artistas</p>
+        </div>
+
+
+        <div class="cardmusicas">
+            <img src="reggae.jpg" alt="Reggae">
+            <h2>Reggae</h2>
+            <p>Clique para conhecer a história e seus principais artistas</p>
+        </div>
+
+
+        <div class="cardmusicas">
+            <img src="sertanejo2.jfif" alt="Sertanejo">
+            <h2>Sertanejo</h2>
+            <p>Clique para conhecer a história e seus principais artistas</p>
+        </div>
+
+        <div class="cardmusicas">
+            <img src="forro.jpg" alt="Forro">
+            <h2>Forró</h2>
+            <p>Clique para conhecer a história e seus principais artistas</p>
+        </div>
+
+        <div class="cardmusicas">
+            <img src="mpb.jpg" alt="Mpb">
+            <h2>Mpb</h2>
+            <p>Clique para conhecer a história e seus principais artistas</p>
+        </div>
+
+        <div class="cardmusicas">
+            <img src="eletronica.jpg" alt="Eletrônica">
+            <h2> Música eletrônica</h2>
+            <p>Clique para conhecer a história e seus principais artistas</p>
+        </div>
+
+        <div class="cardmusicas">
+            <img src="jazz.jpg" alt="Jazz">
+            <h2>jazz</h2>
+            <p>Clique para conhecer a história e seus principais artistas</p>
+        </div>
+
+        <div class="cardmusicas">
+            <img src="funk.jpg" alt="Funk">
+            <h2>Funk</h2>
+            <p>Clique para conhecer a história e seus principais artistas</p>
+        </div>
+
+        <div class="cardmusicas">
+            <img src="kpop.jpg" alt="kpop">
+            <h2>K-pop</h2>
+            <p>Clique para conhecer a história e seus principais artistas</p>
+        </div>
+
+        <script>
+        function navBar() {
+        const navButton = document.getElementById('nav-img'); 
+        const navContainer = document.getElementById('nav-container');
+        navContainer.classList.toggle('ativo');
+        navButton.classList.toggle('ativo');
+}
+    </script>
+
+</body>
+
+</html>
