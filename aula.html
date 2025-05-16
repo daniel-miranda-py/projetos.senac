@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao Desenvolvimento Web</title>
+
+</head>
+<style>
+    header{
+    background-color: #000000;
+    padding: 30px 0;
+}
+.caixa{
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+}
+h1{
+    color: #ffffff;
+    font-size: 30px;
+    text-align: center;
+}
+h2{
+    text-align: center;
+    color: #000000;
+}
+
+.pesquisa-container {
+    width: 940px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.pesquisa-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.pesquisa-container input[type="text"],
+.pesquisa-container button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.pesquisa-container button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pesquisa-container button:hover {
+    background-color: #0056b3;
+}
+
+.produtos {
+    width: 940px;
+    margin: 20px auto;
+    padding: 50px 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.produtos li {
+    display: block;
+    text-align: center;
+    width: 300px;
+    margin: 15px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.produtos li:hover {
+    border-color: #C78C19;
+}
+
+.produtos li:active {
+    border-color: #088C19;
+}
+
+.produtos li:hover h2 {
+    font-size: 34px;
+}
+
+.produtos h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.produto-descricao {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.produto-preco {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.produtos li img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+</style>
+<body>
+    <header>
+        <H1> Slider E Lista  Simples</H1>
+    </header>
+    <div class="pesquisa-container">
+        <h2>Adicionar Novo Produto</h2>
+        <label for="nome-produto">Nome:</label>
+        <input type="text" id="nome-produto"><br><br>
+        <label for="descricao-produto">Descrição:</label>
+        <input type="text" id="descricao-produto"><br><br>
+        <label for="url-produto">URL da Imagem:</label>
+        <input type="text" id="url-produto"><br><br>
+        <button onclick="adicionarProduto()">Adicionar Produto</button>
+    </div>
+    <h2>Produtos</h2>
+    <ul class="produtos">
+        <script>
+            let produtos = [
+                {
+                    nome: "Camisa Algodão",
+                    descricao: "Camisa confortável de algodão premium.",
+                    imagem: "https://unialphauniformes.com.br/wp-content/uploads/2022/07/modelo-de-camisa-polo-personalizada-uniformes-fardamentos.jpg",
+                },
+                {
+                    nome: "Tênis Esportivo",
+                    descricao: "Tênis ideal para corrida e atividades físicas.",
+                    imagem: "https://modaum.cdn.magazord.com.br/img/2023/11/produto/775/02-tenis-esportivo-masculino-olympikus-em-tecido-preto.jpeg?ims=600x600",                   
+                },
+                {
+                    nome: "Boné Aba Reta",
+                    descricao: "Boné estiloso para o dia a dia.",
+                    imagem: "https://acdn-us.mitiendanube.com/stores/004/510/997/products/eb85223d2defa3a3218efd13e302468d-9e013dcfa2be99d61e17177934283456-1024-1024.webp",
+
+                }
+            ];
+
+            const listaProdutos = document.querySelector('.produtos');
+
+            function renderizarProdutos() {
+                listaProdutos.innerHTML = ''; // Limpa a lista antes de renderizar novamente
+                produtos.forEach(produto => {
+                    const listItem = document.createElement('li');
+                    const article = document.createElement('article');
+                    const nomeProduto = document.createElement('h2');
+                    const imagemProduto = document.createElement('img');
+                    const descricaoProduto = document.createElement('p');
+                    const precoProduto = document.createElement('p');
+
+                    nomeProduto.textContent = produto.nome;
+                    imagemProduto.src = produto.imagem;
+                    imagemProduto.alt = produto.nome;
+                    descricaoProduto.textContent = produto.descricao;
+                    descricaoProduto.classList.add('produto-descricao');
+                    precoProduto.textContent = produto.preco || ''; // Adiciona preço se existir
+                    precoProduto.classList.add('produto-preco');
+
+                    article.appendChild(nomeProduto);
+                    article.appendChild(imagemProduto);
+                    article.appendChild(descricaoProduto);
+                    if (produto.preco) {
+                        article.appendChild(precoProduto);
+                    }
+                    listItem.appendChild(article);
+                    listaProdutos.appendChild(listItem);
+                });
+            }
+
+            function adicionarProduto() {
+                const nome = document.getElementById('nome-produto').value;
+                const descricao = document.getElementById('descricao-produto').value;
+                const imagem = document.getElementById('url-produto').value;
+
+                if (nome && imagem) {
+                    produtos.push({ nome: nome, descricao: descricao, imagem: imagem });
+                    document.getElementById('nome-produto').value = '';
+                    document.getElementById('descricao-produto').value = '';
+                    document.getElementById('url-produto').value = '';
+                    renderizarProdutos(); // Atualiza a lista após adicionar o produto
+                } else {
+                    alert('Por favor, preencha o nome e a URL da imagem.');
+                }
+            }
+
+            renderizarProdutos(); // Renderiza os produtos iniciais ao carregar a página
+        </script>
+    </ul>
+</body>
+</html>
