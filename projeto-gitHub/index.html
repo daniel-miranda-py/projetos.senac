@@ -56,13 +56,14 @@
 
         try {
             const response = await fetch (`https://github.com/${username}`);
+            document.write(response);
             const data = await response.json();
 
             resultado.innerHTML = `
                 <img src="${data.avatar_url}" alt = "Avatar ${data.login}"/>
                 <h2> ${data.name ||  data.login} <h2>
                 <p> <strong> Usuário:</strong> ${data.login} </p>
-                <p> <strong> Bio></strong> ${data.bio || "Não disponível"} <p>
+                <p> <strong> Bio</strong> ${data.bio || "Não disponível"} <p>
                 <p> <strong> Repositórios públicos </strong> ${data.public_repos} </p>
                 <p> <strong> Seguidores: </strong> ${data.followers} </p>
                 <p> <strong> Seguindo: </strong> ${data.following} </p>
@@ -70,7 +71,7 @@
             `;
 
                 } catch (error) {
-                    resultado.innerHTML = `<p> ${error.message}  </p> `;  
+                    resultado.innerHTML = `<p> ${error.message('error404')}  </p> `;  
                 }
         }
 </script>
